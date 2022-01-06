@@ -1,0 +1,61 @@
+{
+  "signup": [],
+  "login": [
+    {
+      "sigid": "유수정",
+      "sigpw": "1234",
+      "login": false,
+      "id": 1
+    }
+  ],
+  "room": [
+    {
+      "roominfo": {
+        "roomname": "가",
+        "manager": {
+          "sigid": "",
+          "id": 4
+        }
+      },
+      "id": 1
+    },
+    {
+      "roominfo": {
+        "roomname": "나",
+        "manager": {
+          "sigid": "",
+          "id": 4
+        }
+      },
+      "id": 2
+    }
+  ],
+  "user": [
+    {
+      "user": {
+        "sigid": "",
+        "id": 4
+      },
+      "room_leader": true,
+      "roomId": "1",
+      "id": 1
+    },
+    {
+      "user": {
+        "sigid": "",
+        "id": 4
+      },
+      "room_leader": true,
+      "roomId": "2",
+      "id": 2
+    }
+  ],
+  "todolist": [
+    {
+      "title": "수정생일",
+      "createdAt": "2022-1-30",
+      "calendarId": "1",
+      "id": 1
+    }
+  ]
+}
