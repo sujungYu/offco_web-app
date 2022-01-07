@@ -1,3 +1,4 @@
+//Calendar.vue, TodoList.vue vuex
 import axios from 'axios'
 
 const Calendar = {
@@ -31,6 +32,7 @@ const Calendar = {
     },
     actions: {
         addTodo({ commit }, payload) {
+            //title: 할일, createdAt: 날짜, caleendarId: 방별ID
             axios.post(`${'http://localhost:8000'}/todolist`, {
                 title: payload.title,
                 createdAt: payload.createdAt,
@@ -41,6 +43,7 @@ const Calendar = {
             })
         },
         getTodo({ commit }, payload) {
+            //해당방ID를 payload로 받음
              axios.get(`${'http://localhost:8000'}/todolist?calendarId=${payload}`)
             .then((res) => {
                 let i;

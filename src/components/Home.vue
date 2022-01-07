@@ -1,5 +1,6 @@
 <template>
   <div>
+      
       <div class="top">
           offco<i class="fas fa-sign-out-alt out" v-on:click="out"></i>
       </div>
@@ -17,15 +18,21 @@
           </ul>
           <i class="fas fa-plus-circle createroom" v-on:click="create"></i>
       </div>
+      <RoomCreate v-show="showModal" v-bind:open="showModal" @close="showModal=false"></RoomCreate>
   </div>
 </template>
 
 <script>
+import RoomCreate from './RoomCreate.vue'
 export default {
+    components: {
+        RoomCreate
+    },
     data() {
         return {
         roomlists: [],
-        userid: ''
+        userid: '',
+        showModal: false
         }
     },
     created() {
@@ -38,7 +45,8 @@ export default {
     },
     methods: {
         create() {
-            this.$router.push('/create')
+            this.showModal = !this.showModal;
+            // this.$router.push('/create')
         },
         out() {
             localStorage.removeItem('user')
@@ -57,9 +65,9 @@ div {
     font-size: 10px;
     background-color: rgb(254, 249, 239);
     text-align: center;
-    width : 100vw;
+    /* width : 100vw; */
     height : 100vh;
-    position: relative;
+    /* position: relative; */
 }
 ul {
     width: 81vw;
@@ -69,7 +77,7 @@ ul {
 }
 
 .top {
-    width: 100vw;
+    /* width: 100vw; */
     height: 9vh;
     background-color: rgb(255, 134, 94);
     font-size: 5.3vh;
@@ -77,18 +85,6 @@ ul {
     font-family: 'Kite One', sans-serif;
     text-align: center;
     padding-left: 3vw;
-}
-.bottom {
-    margin: auto;
-    width: 100vw;
-    height: 9vh;
-    background-color: rgb(255, 134, 94);
-    font-size: 3em;
-    color: white;
-    vertical-align : middle;
-    justify-content: space-around;
-    display: flex;
-
 }
 .box {
     width: 80.9vw;
@@ -109,10 +105,11 @@ ul {
     color: rgb(255, 134, 94);
     left: 32vw;
     position: relative;
+    margin-bottom: 3vh;
 }
 .back {
     width:91vw;
-    height: 87vh;
+    /* height: 87vh; */
     border: 1px solid rgb(255, 134, 94);
     border-radius: 15px;
     background-color: white;
@@ -129,7 +126,7 @@ h1 {
 }
 .out {
     position: absolute;
-    left: 83vw;
+    left: 84vw;
     top: 2vh;
 }
 .icon {

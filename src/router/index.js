@@ -4,7 +4,7 @@ import Login from "../components/Login.vue"
 import SignUp from "../components/SignUp.vue"
 import Home from "../components/Home.vue"
 import RoomHome from "../components/RoomHome.vue"
-import RoomCreate from "../components/RoomCreate.vue"
+// import RoomCreate from "../components/RoomCreate.vue"
 import Invite from '../components/Invite.vue'
 import AddRoom from '../components/AddRoom.vue'
 import Calendar from '../components/Calendar.vue'
@@ -55,11 +55,11 @@ export default new Router({
             component: Invite,
             props: true,
           },
-        {
-            path: '/create',
-            name: 'roomcreate',
-            component: RoomCreate,
-        },
+        // {
+        //     path: '/create',
+        //     name: 'roomcreate',
+        //     component: RoomCreate,
+        // },
         {
             path: '/room/n/:token',
             name: 'AddRoom',

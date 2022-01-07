@@ -16,11 +16,11 @@
           <ul>
           <li v-for="user in users" v-bind:key="user">
              <h2>
-                 <i class="far fa-square square"></i>&nbsp;&nbsp;{{user}}
+                 <i class="fas fa-user-circle user"></i>&nbsp;&nbsp;{{user}}
              </h2>
           </li>
             </ul>
-            <button class="invite" v-on:click="invite">멤버초대<i class="fas fa-plus"></i></button>
+            <button class="invite" v-on:click="invite">멤버초대&nbsp;<i class="fas fa-plus"></i></button>
             <invite v-show="showModal" v-bind:open="showModal" @close="showModal=false"></invite>
           <!-- <i class="fas fa-plus-circle createroom" ></i> -->
       </div>
@@ -84,12 +84,12 @@ div {
     font-size: 10px;
     background-color: rgb(254, 249, 239);
     text-align: center;
-    width : 100vw;
+    /* width : 100vw; */
     height : 100vh;
     position: relative;
 }
 .top {
-    width: 100vw;
+    /* width: 100vw; */
     height: 9vh;
     background-color: rgb(255, 134, 94);
     font-size: 5.3vh;
@@ -102,8 +102,8 @@ div {
     display: inline-block; */
 }
 .title {
-    margin: 1.7vh auto;
-    width: 84.1vw;
+    margin: 1.9vh auto;
+    width: 84vw;
     height: 7.6vh;
     color: white;
     background-color: rgb(255, 134, 94);
@@ -118,7 +118,7 @@ div {
 }
 .back {
     width:91vw;
-    height: 78.4vh;
+    height: 87vh;
     border: 1px solid rgb(162, 210, 255);
     border-radius: 15px;
     background-color: white;
@@ -134,35 +134,36 @@ ul {
     text-align: left;
 }
 li {
-    margin-left: 1.2em ;
+    margin-left: 4vh ;
 }
 
 h2 {
-    font-size: 2em;
-    font-weight: lighter;
-    font-family: 'Gothic A1', sans-serif;
+    margin: 4vh auto;
+    font-size: 1.9em;
+    font-weight: 400;
+    font-family: 'Kite One', sans-serif;
 }
 .left {
     left: 4vw;
     top: 2vh;
     position: absolute
 }
-.square {
-    font-size: 1.2em;
+/* .user {
+    font-size: 1.3em;
     font-weight: lighter;
-}
+} */
 .invite {
     padding: 0;
     width: 36.3vw;
     height: 6.5vh;
     border: none;
-    border-radius: 15px;
+    border-radius: 20px;
     background-color: rgb(255, 134, 94);
     color: white;
     font-size: 1.8em;
-    font-family: 'Gothic A1', sans-serif;
+     font-family: 'Kite One', sans-serif;
     left: 22vw;
-    /* top: 27vh; */
+    /* font-weight: 600; */
     position: relative;
 }
 .navbar {
@@ -172,7 +173,7 @@ h2 {
     vertical-align : middle;
     justify-content: space-around;
     display: flex;
-    transition: color 0.25s ease-in;
+    /* transition: color 0.25s ease-in; */
 }
 .on {
     color: rgb(255, 134, 94);

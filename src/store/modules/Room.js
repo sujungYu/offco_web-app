@@ -1,3 +1,4 @@
+//AddRoom.vue, Home.vue, Invite.vue, RoomCreate.vue, RoomHome.vue vuex
 import axios from 'axios'
 
 const Room = {
@@ -45,6 +46,7 @@ const Room = {
 
     },
     actions: {
+        //방을 만들거나 초대 링크를 수락했을 때
         member({ commit }, payload) {
              axios.post(`${'http://localhost:8000'}/room/${payload.roomId}/user`, 
             {
@@ -60,6 +62,7 @@ const Room = {
                 console.log(error)
             })
         },
+        // 방별 roomname
         setRoomName({ commit }, payload) {
             return new Promise((resolve, reject) => {
                 axios.get(`${'http://localhost:8000'}/room/${payload}`)
@@ -72,6 +75,7 @@ const Room = {
             })
             })
         },
+        //방별 username
         setRoomUser({ commit }, payload) {
             return new Promise((resolve, reject) => {
                 axios.get(`${'http://localhost:8000'}/user?roomId=${payload}`)
@@ -84,14 +88,15 @@ const Room = {
             })
             })
         },
+        //1. Home.vue에서 userid를 payload로 받아 해당 user가 등록된 방 체크
         checkRoom({ dispatch }, payload) {
             return new Promise((resolve, reject) => {
                 axios.get(`${'http://localhost:8000'}/user?user.id=${payload}`)
                 .then((res) => {
                     for(let i=0; i<res.data.length; i++) {
                         res.data[i] = res.data[i].roomId
-                    }
-                    dispatch('setRoom', res.data)
+                    } //방 id를 받아
+                    dispatch('setRoom', res.data) 
                     console.log(res.data);
                     resolve(res)
                 }).catch((error) => {
@@ -99,6 +104,7 @@ const Room = {
             })
             })
         },
+        //2. 위에서 전달받은 방 id를 payload로 받아 해당방의 정보를 get
         setRoom({ commit }, payload) {
             return new Promise((resolve, reject) => {
                 for(let i=0; i<payload.length; i++) {
@@ -114,7 +120,7 @@ const Room = {
 
             })
         },
-                
+         //초대 url을 patch로 url에 추가       
         inviteToken({ commit }, payload) {
             axios.patch(`${'http://localhost:8000'}/room/${this.getters.RoomId}`, {token: payload})
            .then((res) => {
@@ -125,6 +131,7 @@ const Room = {
                commit('useToken', false)
            })
        },
+       //해당 초대 링크가 있는지 확인하여 가져옴
        checkToken({ commit }, payload) {
         return new Promise((resolve, reject) => {
             axios.get(`${'http://localhost:8000'}/room?token=${payload}`)

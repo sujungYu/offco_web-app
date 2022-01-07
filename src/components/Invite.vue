@@ -3,9 +3,9 @@
       <div class="modal" :class="{'active': true }">>
         <div class="overlay" @click="$emit('close')"></div>
             <div class="modal-card">
-                <button v-on:click="createinvitetoken">초대링크생성</button>
-                    <input v-model="inviteurl" placeholder="아래 링크를 복사하여 멤버를 초대하세요." type="text">
-
+                <h1>INVITE</h1>
+                <input v-model="inviteurl" placeholder="해당 링크로 초대하세요." type="text">
+                <button v-on:click="createinvitetoken">click&nbsp;<i class="fas fa-link"></i></button>
             </div>
       </div>
   </div>
@@ -40,7 +40,33 @@ export default {
 }
 </script>
 
-<style>
+<style scoped>
+@import url('https://fonts.googleapis.com/css2?family=Gothic+A1&display=swap');
+h1 {
+  margin-top: 13vh;
+  font-family: 'Gothic A1', sans-serif;
+  font-size: 3em;
+  font-weight: normal;
+
+}
+input {
+ /* margin-top: 3vh; */
+  width: 70vw;
+  height: 6.2vh;
+  border: 1px solid rgb(57, 62, 70);
+  border-radius: 15px;
+}
+button {
+    margin: 2vh auto;
+    margin-left: 50vw;
+    font-size: 1.5em;
+    width: 22vw;
+    height: 6vh;
+    border: 1px solid rgb(57, 62, 70);
+    color: white;
+    border-radius: 15px;
+    background-color: rgb(57, 62, 70);
+}
 .modal,
 .overlay {
   width: 100vw;
@@ -62,7 +88,7 @@ export default {
   /* padding: 20px; */
   background-color: rgb(254, 249, 239);
   border-radius: 15px;
-  min-height: 80vh;
+  min-height: 60vh;
   z-index: 10;
   opacity: 1;
 }

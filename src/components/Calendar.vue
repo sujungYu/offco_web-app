@@ -1,9 +1,9 @@
 <template>
   <div>
-      <h1>
-      <i class="fas fa-arrow-left back" v-on:click="back"></i>
-      offco
-      </h1>
+    <div class="top">
+          <i class="fas fa-arrow-left left" v-on:click="back"></i>
+          offco
+      </div>
       <div class="border">
         <div class="header">
             <i class="fas fa-angle-left arrowLeft" v-on:click="controlMonth('prev')"></i>
@@ -223,19 +223,37 @@ div {
     /* position: relative; */
     margin: 0 auto;
 }
-h1 {
+.top {
+    /* width: 100vw; */
+    height: 9vh;
+    background-color: rgb(255, 134, 94);
+    font-size: 5.3vh;
+    color: white;
+    font-family: 'Kite One', sans-serif;
+    text-align: center;
+    padding-left: 3vw;
+    /* margin-bottom: 1.6vh; */
+    /* position: relative; 
+    display: inline-block; */
+}
+.left {
+    left: 4vw;
+    top: 2vh;
+    position: absolute
+}
+/* h1 {
     display: inline-block;
     font-family: 'Kite One', sans-serif;
     font-weight: lighter;
-    background-color: rgb(255, 134, 94);;
+    background-color: rgb(255, 134, 94);
     color: white;
     font-size: 3em;
     width: 100vw;
-    height: 9.2vh;
+    height: 9vh;
     margin: 0 auto;
     padding-top: 0.1em;
 
-  }
+  } */
 h2 {
     justify-content: center;
     text-align: center;
@@ -286,6 +304,7 @@ table {
   height: 73.5vh;
   font-family: 'Gothic A1', sans-serif;
   font-size: 1.25em;
+  table-layout: fixed;
    /* border-bottom: 1px solid rgba(28, 31, 34, 0.5); */
   /* border-spacing: 20px 30px; */
 }

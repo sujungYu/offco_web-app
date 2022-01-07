@@ -1,3 +1,5 @@
+//Login.vue, SignUp.vue vuex
+//여기는 이전 login, signup이랑 동일
 import axios from 'axios'
 import router from '../../router';
 
