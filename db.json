@@ -17,8 +17,17 @@
           "id": 1
         }
       },
-      "id": 1,
-      "token": "x1jku92f95o1qz8d75ql"
+      "id": 1
+    },
+    {
+      "roominfo": {
+        "roomname": "나",
+        "manager": {
+          "sigid": "유수정",
+          "id": 1
+        }
+      },
+      "id": 2
     }
   ],
   "user": [
@@ -36,19 +45,140 @@
         "sigid": "유수정",
         "id": 1
       },
-      "room_leader": false,
-      "roomId": "1",
+      "room_leader": true,
+      "roomId": "2",
+      "id": 2
+    }
+  ],
+  "todolist": [],
+  "chat": [
+    {
+      "chatinfo": {
+        "chatname": "가",
+        "manager": {
+          "sigid": "유수정",
+          "id": 1
+        },
+        "homeId": "1"
+      },
+      "id": 1
+    },
+    {
+      "chatinfo": {
+        "chatname": "나",
+        "manager": {
+          "sigid": "유수정",
+          "id": 1
+        },
+        "homeId": "2"
+      },
       "id": 2
     },
     {
-      "user": {
+      "chatinfo": {
+        "chatname": "다",
+        "manager": {
+          "sigid": "유수정",
+          "id": 1
+        },
+        "homeId": "2"
+      },
+      "id": 3
+    },
+    {
+      "chatinfo": {
+        "chatname": "라",
+        "manager": {
+          "sigid": "유수정",
+          "id": 1
+        },
+        "homeId": "2"
+      },
+      "id": 4
+    },
+    {
+      "chatinfo": {
+        "chatname": "마",
+        "manager": {
+          "sigid": "유수정",
+          "id": 1
+        },
+        "homeId": "2"
+      },
+      "id": 5
+    },
+    {
+      "chatinfo": {
+        "chatname": "사",
+        "manager": {
+          "sigid": "유수정",
+          "id": 1
+        },
+        "homeId": "2"
+      },
+      "id": 6
+    }
+  ],
+  "chatuser": [
+    {
+      "chatuser": {
         "sigid": "유수정",
         "id": 1
       },
-      "room_leader": false,
-      "roomId": "1",
+      "chat_leader": true,
+      "homeId": "1",
+      "chatId": "1",
+      "id": 1
+    },
+    {
+      "chatuser": {
+        "sigid": "유수정",
+        "id": 1
+      },
+      "chat_leader": true,
+      "homeId": "2",
+      "chatId": "2",
+      "id": 2
+    },
+    {
+      "chatuser": {
+        "sigid": "유수정",
+        "id": 1
+      },
+      "chat_leader": true,
+      "homeId": "2",
+      "chatId": "3",
       "id": 3
+    },
+    {
+      "chatuser": {
+        "sigid": "유수정",
+        "id": 1
+      },
+      "chat_leader": true,
+      "homeId": "2",
+      "chatId": "4",
+      "id": 4
+    },
+    {
+      "chatuser": {
+        "sigid": "유수정",
+        "id": 1
+      },
+      "chat_leader": true,
+      "homeId": "2",
+      "chatId": "5",
+      "id": 5
+    },
+    {
+      "chatuser": {
+        "sigid": "유수정",
+        "id": 1
+      },
+      "chat_leader": true,
+      "homeId": "2",
+      "chatId": "6",
+      "id": 6
     }
-  ],
-  "todolist": []
+  ]
 }

@@ -4,7 +4,7 @@
         <div class="overlay" @click="$emit('close')"></div>
             <div class="modal-card">
                 <h1>NEW</h1>
-                <input placeholder="방 이름을 입력하세요" v-model="roomname" type="text" >
+                <input placeholder="채팅방 이름을 입력하세요." v-model="chatname" type="text" >
                 <span class="addContainer" v-on:click="create">
                 <i class="far fa-plus-square add"></i>
                 </span>
@@ -15,39 +15,40 @@
       </div>
 </template>
 
-<script scoped>
+<script>
 import axios from 'axios';
 export default {
     data() {
         return {
-            roomname: ""
+            chatname: "",
+            homeId:null
         }
     },
     created() {
         this.roomname = ''
     },
     methods: {
-        // cancel() {
-        //    this.$router.push('/create')
-        // },
         create() {
-            let roominfo = {
-                 roomname: this.roomname,
+            this.homeId = this.$route.params.id
+            let chatinfo = {
+                 chatname: this.chatname,
                  manager: JSON.parse(localStorage.getItem("user")),
+                 homeId: this.homeId
              }
             //  console.log({data});
-             axios.post('http://localhost:8000/room', {roominfo}, {
+             axios.post('http://localhost:8000/chat', {chatinfo}, {
                  headers: { "Content-Type": `application/json`}
              }).then((res)=> {
-                 this.createroom(res.data.id)
+                 this.createchat(res.data.id)
              }).catch((error) => {
                  console.log(error);
              })
         },
-        createroom(roomId) {
-            this.$store.dispatch('member', {roomId: roomId, manager:true})
+        createchat(chatId) {
+            this.home
+            this.$store.dispatch('chatmember', {chatId: chatId, homeId: this.homeId, manager:true})
             .then((res) => {
-                this.$router.push(`/roomhome/${roomId}`)
+                this.$router.push(`/chat/${chatId}`)
                 console.log(res);
             }).catch((error) => {
                 console.log(error);

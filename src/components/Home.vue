@@ -1,6 +1,5 @@
 <template>
   <div>
-      
       <div class="top">
           offco<i class="fas fa-sign-out-alt out" v-on:click="out"></i>
       </div>
@@ -73,7 +72,10 @@ ul {
     width: 81vw;
     margin: 0 auto;
     padding: 0;
-    list-style-type: none;  
+    list-style-type: none;
+}
+li {
+    margin-left: 0vh ;
 }
 
 .top {
@@ -98,7 +100,7 @@ ul {
     margin-bottom: 2.1vh;
     position: relative;
     background-color: white;
-    margin: auto;
+    margin: 0;
 }
 .createroom {
     font-size: 3.5em;
