@@ -2,7 +2,8 @@
 <h1>offco</h1>
 offco는 office와 community를 합친 단어로 단체모임을 위한 sns이다.
 </div>
-###  ScreenShot
+
+### ScreenShot
 <p>
 <img src="https://user-images.githubusercontent.com/87973617/184475773-f93476ab-cb8d-47c1-8e89-52ee6fb222ce.png" width=auto height="300"/>
 <img src="https://user-images.githubusercontent.com/87973617/184475755-c70ef898-8695-48d5-bf77-ae84046a3de8.png" width=auto height="300"/>
@@ -17,6 +18,7 @@ offco는 office와 community를 합친 단어로 단체모임을 위한 sns이�
 <img src="https://user-images.githubusercontent.com/87973617/184475823-4c0e74e5-afe9-407c-bb49-875b33e7bbd9.png" width="200" height="360"/>
 <img src="https://user-images.githubusercontent.com/87973617/184475825-61bf00fe-c34d-422c-950d-ca6e8589f64b.png" width="200" height="360"/>
 </p>
+
 ## 구상 이유
 대학 신입생때에는 팀플, 학생회, 동아리 등 다앙한 단체 모임을 하게된다.   
 이와 같은 단체 모임에는 수많은 인원이 속해있기 때문에 대부분의 대화와 공지는 카카오톡을 이용한다.
