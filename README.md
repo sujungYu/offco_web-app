@@ -79,3 +79,6 @@ figma 사용
 + Vuex
 + Vue-router
 + Figma
+
+## 업데이트
+https://github.com/sujungYu/renew_offco_project
